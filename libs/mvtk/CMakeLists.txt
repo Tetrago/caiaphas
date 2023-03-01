@@ -3,8 +3,10 @@ project(mvtk)
 find_package(Vulkan REQUIRED)
 
 add_library(mvtk STATIC
+	"include/mvtk/extension.hpp"
 	"include/mvtk/instance.hpp"
 
+	"src/extension.cpp"
 	"src/instance.cpp")
 
 target_compile_features(mvtk PUBLIC cxx_std_20)

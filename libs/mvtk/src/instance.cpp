@@ -2,10 +2,17 @@
 
 #include <stdexcept>
 
+#include "mvtk/extension.hpp"
+
 namespace mvtk
 {
 	Instance::Instance(const Builder& builder)
 	{
+		if(!has_required_extensions(builder.mExtensions))
+		{
+			throw std::runtime_error("Failed to find all required instance extensions");
+		}
+
 		VkApplicationInfo appInfo{};
 		appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
 		appInfo.pApplicationName = builder.mApplicationName.c_str();

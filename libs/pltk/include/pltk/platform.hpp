@@ -1,6 +1,6 @@
 #pragma once
 
-#include <span>
+#include <vector>
 
 #include "window.hpp"
 
@@ -18,7 +18,7 @@ namespace pltk
 		Window createWindow(const WindowCreateInfo& createInfo);
 
 		void update() noexcept;
-		std::span<const char*> getRequiredExtensions() noexcept;
+		std::vector<const char*> getRequiredExtensions() noexcept;
 	private:
 		inline static int sCount = 0;
 	};

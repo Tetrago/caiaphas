@@ -33,11 +33,11 @@ namespace pltk
 		glfwPollEvents();
 	}
 
-	std::span<const char*> Platform::getRequiredExtensions() noexcept
+	std::vector<const char*> Platform::getRequiredExtensions() noexcept
 	{
 		uint32_t count;
 		const char** extensions = glfwGetRequiredInstanceExtensions(&count);
 
-		return std::span<const char*>(extensions, count);
+		return std::vector<const char*>(extensions, extensions + count);
 	}
 }

@@ -4,7 +4,7 @@ find_package(glfw3 CONFIG REQUIRED)
 
 add_library(pltk STATIC
 	"src/platform.cpp"
-	"src/window.cpp")
+	"src/window.cpp" )
 
 target_compile_features(pltk PUBLIC cxx_std_20)
 

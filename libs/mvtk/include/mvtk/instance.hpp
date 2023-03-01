@@ -2,9 +2,11 @@
 
 #include <string>
 #include <cstdint>
-#include <span>
 #include <vector>
+#include <span>
 #include <vulkan/vulkan.h>
+
+#include "extension.hpp"
 
 namespace mvtk
 {
@@ -30,7 +32,7 @@ namespace mvtk
 				return *this;
 			}
 
-			Builder& extension(const std::span<const char*>& extensions) noexcept
+			Builder& extension(std::span<const char* const> extensions) noexcept
 			{
 				mExtensions.insert(mExtensions.end(), extensions.begin(), extensions.end());
 				return *this;
