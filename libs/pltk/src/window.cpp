@@ -3,6 +3,7 @@
 #include <stdexcept>
 
 #include "pltk/platform.hpp"
+#include "log.hpp"
 
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
@@ -17,10 +18,15 @@ namespace pltk
 		glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 		glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 
-		mHandle = glfwCreateWindow(mWidth, mHeight, createInfo.title.c_str(), nullptr, nullptr);
+		mHandle = glfwCreateWindow(mWidth, mHeight, createInfo.title.data(), nullptr, nullptr);
 		if(!mHandle)
 		{
+			logger().error("Failed to create window \"{}\"", createInfo.title);
 			throw std::runtime_error("Failed to create window");
+		}
+		else
+		{
+			logger().info("Create window \"{}\" of size {}x{}", createInfo.title, mWidth, mHeight);
 		}
 
 		glfwSetWindowUserPointer(mHandle, this);

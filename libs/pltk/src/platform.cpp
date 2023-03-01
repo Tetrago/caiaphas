@@ -2,6 +2,8 @@
 
 #include <stdexcept>
 
+#include "log.hpp"
+
 #define GLFW_INCLUDE_NONE
 #include <GLFW/glfw3.h>
 
@@ -15,12 +17,18 @@ namespace pltk
 		{
 			throw std::runtime_error("Failed to initialize GLFW");
 		}
+		else
+		{
+			logger().info("Initialized platform handler");
+		}
 	}
 
 	Platform::~Platform() noexcept
 	{
 		if(--sCount > 0) return;
+
 		glfwTerminate();
+		logger().info("Platform handler destructed");
 	}
 
 	Window Platform::createWindow(const WindowCreateInfo& createInfo)

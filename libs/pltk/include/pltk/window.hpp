@@ -1,7 +1,7 @@
 #pragma once
 
 #include <stack>
-#include <string>
+#include <string_view>
 
 struct GLFWwindow;
 
@@ -23,7 +23,7 @@ namespace pltk
 	{
 		int width;
 		int height;
-		std::string title;
+		std::string_view title;
 	};
 
 	class Window

@@ -3,5 +3,6 @@ project(caiaphas)
 
 add_subdirectory("libs/mvtk")
 add_subdirectory("libs/pltk")
+add_subdirectory("libs/toolkit")
 
 add_subdirectory("extras/player")

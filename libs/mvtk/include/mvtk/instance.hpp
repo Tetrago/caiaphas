@@ -1,6 +1,6 @@
 #pragma once
 
-#include <string>
+#include <string_view>
 #include <cstdint>
 #include <vector>
 #include <span>
@@ -20,7 +20,7 @@ namespace mvtk
 			Builder(const Builder&) = delete;
 			Builder(Builder&&) = delete;
 
-			Builder& name(const std::string& applicationName) noexcept
+			Builder& name(std::string_view applicationName) noexcept
 			{
 				mApplicationName = applicationName;
 				return *this;
@@ -51,7 +51,7 @@ namespace mvtk
 		private:
 			Builder() noexcept = default;
 
-			std::string mApplicationName;
+			std::string_view mApplicationName;
 			int mApplicationVersion = 0;
 			std::vector<const char*> mExtensions;
 		};

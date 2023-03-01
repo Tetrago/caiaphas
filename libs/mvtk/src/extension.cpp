@@ -2,6 +2,8 @@
 
 #include <cstdint>
 
+#include "log.hpp"
+
 namespace mvtk
 {
 	std::vector<VkExtensionProperties> get_extensions() noexcept
@@ -26,8 +28,11 @@ namespace mvtk
 				goto next;
 			}
 
+			logger().warn("Failed to location extension \"{}\"", ext);
 			return false;
+
 		next:;
+			logger().trace("Located extension \"{}\"", ext);
 		}
 
 		return true;

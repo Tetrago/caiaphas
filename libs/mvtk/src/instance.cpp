@@ -15,7 +15,7 @@ namespace mvtk
 
 		VkApplicationInfo appInfo{};
 		appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
-		appInfo.pApplicationName = builder.mApplicationName.c_str();
+		appInfo.pApplicationName = builder.mApplicationName.data();
 		appInfo.applicationVersion = builder.mApplicationVersion;
 		appInfo.pEngineName = "mvtk";
 		appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
