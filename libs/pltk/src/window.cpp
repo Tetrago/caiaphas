@@ -9,17 +9,15 @@
 
 namespace pltk
 {
-	Window::Window(int width, int height, const std::string& title)
-		: mWidth(width)
-		, mHeight(height)
+	Window::Window(const WindowCreateInfo& createInfo)
+		: mWidth(createInfo.width)
+		, mHeight(createInfo.height)
 	{
-		Platform::push();
-
 		glfwDefaultWindowHints();
 		glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 		glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 
-		mHandle = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr);
+		mHandle = glfwCreateWindow(mWidth, mHeight, createInfo.title.c_str(), nullptr, nullptr);
 		if(!mHandle)
 		{
 			throw std::runtime_error("Failed to create window");
@@ -33,7 +31,6 @@ namespace pltk
 	Window::~Window() noexcept
 	{
 		glfwDestroyWindow(mHandle);
-		Platform::pop();
 	}
 
 	Window::Window(Window&& other) noexcept

@@ -7,7 +7,7 @@
 
 namespace pltk
 {
-	void Platform::push()
+	Platform::Platform()
 	{
 		if(sCount++ > 0) return;
 		
@@ -17,14 +17,27 @@ namespace pltk
 		}
 	}
 
-	void Platform::pop() noexcept
+	Platform::~Platform() noexcept
 	{
 		if(--sCount > 0) return;
 		glfwTerminate();
 	}
 
+	Window Platform::createWindow(const WindowCreateInfo& createInfo)
+	{
+		return Window(createInfo);
+	}
+
 	void Platform::update() noexcept
 	{
 		glfwPollEvents();
+	}
+
+	std::span<const char*> Platform::getRequiredExtensions() noexcept
+	{
+		uint32_t count;
+		const char** extensions = glfwGetRequiredInstanceExtensions(&count);
+
+		return std::span<const char*>(extensions, count);
 	}
 }

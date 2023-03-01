@@ -2,13 +2,12 @@
 
 #include <string>
 #include <cstdint>
+#include <span>
 #include <vector>
 #include <vulkan/vulkan.h>
 
 namespace mvtk
 {
-	using InstanceExtensionRequesterFn = uint32_t(*)(const char***);
-
 	class Instance
 	{
 	public:
@@ -31,16 +30,15 @@ namespace mvtk
 				return *this;
 			}
 
-			Builder& extension(InstanceExtensionRequesterFn fn) noexcept
+			Builder& extension(const std::span<const char*>& extensions) noexcept
 			{
-				const char** extensions;
-				uint32_t count = fn(&extensions);
+				mExtensions.insert(mExtensions.end(), extensions.begin(), extensions.end());
+				return *this;
+			}
 
-				for(int i = 0; i < count; ++i)
-				{
-					mExtensions.push_back(extensions[i]);
-				}
-
+			Builder& extension(const char* extension) noexcept
+			{
+				mExtensions.push_back(extension);
 				return *this;
 			}
 
@@ -51,9 +49,9 @@ namespace mvtk
 		private:
 			Builder() noexcept = default;
 
-			std::string mApplicationName = "";
+			std::string mApplicationName;
 			int mApplicationVersion = 0;
-			std::vector<const char*> mExtensions{};
+			std::vector<const char*> mExtensions;
 		};
 
 		~Instance() noexcept;
@@ -65,7 +63,7 @@ namespace mvtk
 
 		operator VkInstance() const noexcept { return mHandle; }
 
-		static Builder&& builder() noexcept
+		static Builder builder() noexcept
 		{
 			return Builder();
 		}

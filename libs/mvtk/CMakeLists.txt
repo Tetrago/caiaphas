@@ -7,7 +7,7 @@ add_library(mvtk STATIC
 
 	"src/instance.cpp")
 
-target_compile_features(mvtk PUBLIC cxx_std_17)
+target_compile_features(mvtk PUBLIC cxx_std_20)
 
 target_link_libraries(mvtk PUBLIC Vulkan::Vulkan)
 target_include_directories(mvtk PUBLIC "include")
