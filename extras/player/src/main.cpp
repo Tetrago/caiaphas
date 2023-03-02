@@ -9,6 +9,7 @@ int main(int argc, char** argv)
 		.name("caiaphas_player")
 		.version(0, 1, 0)
 		.extension(platform.getRequiredExtensions())
+		.debug()
 		.build();
 
 	pltk::Window window = platform.createWindow({ 1024, 576, "Player" });

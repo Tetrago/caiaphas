@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stdexcept>
 #include <string_view>
 #include <cstdint>
 #include <vector>
@@ -44,6 +45,15 @@ namespace mvtk
 				return *this;
 			}
 
+			Builder& debug() noexcept
+			{
+				mExtensions.push_back(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
+				mLayers.push_back("VK_LAYER_KHRONOS_validation");
+				mDebug = true;
+
+				return *this;
+			}
+
 			Instance build()
 			{
 				return Instance(*this);
@@ -54,6 +64,8 @@ namespace mvtk
 			std::string_view mApplicationName;
 			int mApplicationVersion = 0;
 			std::vector<const char*> mExtensions;
+			std::vector<const char*> mLayers;
+			bool mDebug = false;
 		};
 
 		~Instance() noexcept;
@@ -65,6 +77,18 @@ namespace mvtk
 
 		operator VkInstance() const noexcept { return mHandle; }
 
+		template<typename T>
+		inline T getFunction(std::string_view name)
+		{
+			T func = reinterpret_cast<T>(vkGetInstanceProcAddr(mHandle, name.data()));
+			if(!func)
+			{
+				throw std::runtime_error("Failed to find Vulkan function");
+			}
+
+			return func;
+		}
+
 		static Builder builder() noexcept
 		{
 			return Builder();
@@ -73,5 +97,6 @@ namespace mvtk
 		Instance(const Builder& builder);
 
 		VkInstance mHandle;
+		VkDebugUtilsMessengerEXT mMessenger = nullptr;
 	};
 }
