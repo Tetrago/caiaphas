@@ -15,7 +15,7 @@ After enablind the desiered output methods, you can call `build()` to finalize a
 
 ### Options
 
-#### `toStdOut()`{.cpp}
+#### `toStdOut()`
 
 Will output colored messages directly to the terminal standard output using the name specified when building the logger.
 

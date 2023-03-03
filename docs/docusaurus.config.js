@@ -66,6 +66,12 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
+          {
+            href: 'api',
+            position: 'left',
+            label: 'API',
+            target: '_blank'
+          }
         ],
       },
       footer: {

@@ -8,9 +8,14 @@
 
 namespace tk
 {
+	/**
+	 * Logging levels available to be used.
+	 * 
+	 * @see Logger
+	 */
 	enum class LogLevel
 	{
-		Trace = spdlog::level::trace,
+		Trace = spdlog::level::trace, /**< Debug level only enabled when compiled without the `NDEBUG` preprocessor definition.*/
 		Info = spdlog::level::info,
 		Warn = spdlog::level::warn,
 		Error = spdlog::level::err
