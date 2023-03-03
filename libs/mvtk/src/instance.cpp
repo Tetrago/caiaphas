@@ -24,7 +24,9 @@ namespace mvtk
 				}
 			}();
 
-			logger().log(level, "[Vulkan] {}", pData->pMessage);
+			tk::Logger logger = tk::Logger::builder("Vulkan").toFile("vulkan.log").build();
+			logger.log(level, "[Vulkan] {}", pData->pMessage);
+
 			return VK_FALSE;
 		}
 
