@@ -1,3 +1,8 @@
+/**
+ * @file extension.hpp
+ * 
+ * Responsible for handling basic Vulkan extension and layer handling.
+ */
 #pragma once
 
 #include <vector>
