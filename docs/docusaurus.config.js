@@ -70,7 +70,8 @@ const config = {
             href: 'api',
             position: 'left',
             label: 'API',
-            target: '_blank'
+            target: '_blank',
+            prependBaseUrlToHref: true
           }
         ],
       },
