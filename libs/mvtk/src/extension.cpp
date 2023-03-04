@@ -29,42 +29,24 @@ namespace mvtk
 	bool validate_required_extensions(std::span<const char* const> extensions) noexcept
 	{
 		auto available = get_extensions();
-
-		for(const char* ext : extensions)
-		{
-			for(VkExtensionProperties props : available)
+		return std::all_of(extensions.begin(), extensions.end(), [&](const char* name)
 			{
-				if(strcmp(ext, props.extensionName) != 0) continue;
-				goto next;
-			}
-
-			logger().warn("Failed to location extension \"{}\"", ext);
-			return false;
-
-		next:
-			logger().trace("Located extension \"{}\"", ext);
-		}
-
-		return true;
+				return std::any_of(available.begin(), available.end(), [&](VkExtensionProperties props)
+					{
+						return strcmp(props.extensionName, name) == 0;
+					});
+			});
 	}
 
 	bool validate_required_layers(std::span<const char* const> layers) noexcept
 	{
 		auto available = get_layers();
-
-		for(const char* layer : layers)
-		{
-			for(VkLayerProperties props : available)
+		return std::all_of(layers.begin(), layers.end(), [&](const char* name)
 			{
-				if(strcmp(layer, props.layerName) != 0) continue;
-				goto next;
-			}
-
-			logger().warn("Failed to location layer \"{}\"", layer);
-			return false;
-
-		next:
-			logger().trace("Located extension \"{}\"", layer);
-		}
+				return std::any_of(available.begin(), available.end(), [&](VkLayerProperties props)
+					{
+						return strcmp(props.layerName, name) == 0;
+					});
+			});
 	}
 }
