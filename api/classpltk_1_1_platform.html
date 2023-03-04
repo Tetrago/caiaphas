@@ -49,6 +49,11 @@ $(function() {
   <div class="headertitle"><div class="title">pltk::Platform Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Object used to manage platform specific features.  
+ <a href="classpltk_1_1_platform.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="platform_8hpp_source.html">platform.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -58,16 +63,112 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a104665443405d766bc6510e21cbff1cc"><td class="memItemLeft" align="right" valign="top"><a id="a104665443405d766bc6510e21cbff1cc" name="a104665443405d766bc6510e21cbff1cc"></a>
 <a class="el" href="classpltk_1_1_platform.html">Platform</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classpltk_1_1_platform.html">Platform</a> &amp;)=delete</td></tr>
 <tr class="separator:a104665443405d766bc6510e21cbff1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a223290279317404911bb2cedb2281046"><td class="memItemLeft" align="right" valign="top"><a id="a223290279317404911bb2cedb2281046" name="a223290279317404911bb2cedb2281046"></a>
-<a class="el" href="classpltk_1_1_window.html">Window</a>&#160;</td><td class="memItemRight" valign="bottom"><b>createWindow</b> (const <a class="el" href="structpltk_1_1_window_create_info.html">WindowCreateInfo</a> &amp;createInfo)</td></tr>
+<tr class="memitem:a75a5f50de40101ed49a71c683bb90f64"><td class="memItemLeft" align="right" valign="top"><a id="a75a5f50de40101ed49a71c683bb90f64" name="a75a5f50de40101ed49a71c683bb90f64"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Platform</b> (<a class="el" href="classpltk_1_1_platform.html">Platform</a> &amp;&amp;other) noexcept=default</td></tr>
+<tr class="separator:a75a5f50de40101ed49a71c683bb90f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdeb07aeced1e51c9a95a8c14ad1f1d6"><td class="memItemLeft" align="right" valign="top"><a id="acdeb07aeced1e51c9a95a8c14ad1f1d6" name="acdeb07aeced1e51c9a95a8c14ad1f1d6"></a>
+<a class="el" href="classpltk_1_1_platform.html">Platform</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classpltk_1_1_platform.html">Platform</a> &amp;&amp;)=delete</td></tr>
+<tr class="separator:acdeb07aeced1e51c9a95a8c14ad1f1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223290279317404911bb2cedb2281046"><td class="memItemLeft" align="right" valign="top">*see <a class="el" href="classpltk_1_1_window.html">Window</a> <a class="el" href="classpltk_1_1_window.html">Window</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpltk_1_1_platform.html#a223290279317404911bb2cedb2281046">createWindow</a> (const <a class="el" href="structpltk_1_1_window_create_info.html">WindowCreateInfo</a> &amp;createInfo)</td></tr>
+<tr class="memdesc:a223290279317404911bb2cedb2281046"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sole method of creating windows.  <br /></td></tr>
 <tr class="separator:a223290279317404911bb2cedb2281046"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1446b77ea90f6f70cc543c2ef8649a30"><td class="memItemLeft" align="right" valign="top"><a id="a1446b77ea90f6f70cc543c2ef8649a30" name="a1446b77ea90f6f70cc543c2ef8649a30"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> () noexcept</td></tr>
+<tr class="memitem:a1446b77ea90f6f70cc543c2ef8649a30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpltk_1_1_platform.html#a1446b77ea90f6f70cc543c2ef8649a30">update</a> () noexcept</td></tr>
+<tr class="memdesc:a1446b77ea90f6f70cc543c2ef8649a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates any related platform data, such as system events.  <br /></td></tr>
 <tr class="separator:a1446b77ea90f6f70cc543c2ef8649a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0f5ac4464525d7cd5e17dc08de26973"><td class="memItemLeft" align="right" valign="top"><a id="af0f5ac4464525d7cd5e17dc08de26973" name="af0f5ac4464525d7cd5e17dc08de26973"></a>
-std::vector&lt; const char * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getRequiredExtensions</b> () noexcept</td></tr>
+<tr class="memitem:af0f5ac4464525d7cd5e17dc08de26973"><td class="memItemLeft" align="right" valign="top">std::vector&lt; const char * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpltk_1_1_platform.html#af0f5ac4464525d7cd5e17dc08de26973">getRequiredExtensions</a> () noexcept</td></tr>
+<tr class="memdesc:af0f5ac4464525d7cd5e17dc08de26973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the required Vulkan instance extensions as needed by this platform.  <br /></td></tr>
 <tr class="separator:af0f5ac4464525d7cd5e17dc08de26973"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Object used to manage platform specific features. </p>
+<p>This is an internally reference counted object that manages any instances required to manage platform data. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a223290279317404911bb2cedb2281046" name="a223290279317404911bb2cedb2281046"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a223290279317404911bb2cedb2281046">&#9670;&#160;</a></span>createWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpltk_1_1_window.html">Window</a> pltk::Platform::createWindow </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structpltk_1_1_window_create_info.html">WindowCreateInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>createInfo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sole method of creating windows. </p>
+<p>Windows are created directly through a platform object, rahter than constructing them within the <code><a class="el" href="classpltk_1_1_window.html">Window</a></code> class.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">createInfo</td><td><a class="el" href="classpltk_1_1_window.html" title="Object holding and operating system windows.">Window</a> creation info, including title and resolution information.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Newely created <code><a class="el" href="">window</a></code>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="structpltk_1_1_window_create_info.html" title="Structure used to specify window creation parameters.">WindowCreateInfo</a> </dd></dl>
+
+</div>
+</div>
+<a id="af0f5ac4464525d7cd5e17dc08de26973" name="af0f5ac4464525d7cd5e17dc08de26973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0f5ac4464525d7cd5e17dc08de26973">&#9670;&#160;</a></span>getRequiredExtensions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; const char * &gt; pltk::Platform::getRequiredExtensions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves the required Vulkan instance extensions as needed by this platform. </p>
+<p>This method does not validate the existence of the extensions, only listing the required extensions this platform implementation needs.</p>
+<dl class="section return"><dt>Returns</dt><dd>Vector of required extension names. </dd></dl>
+
+</div>
+</div>
+<a id="a1446b77ea90f6f70cc543c2ef8649a30" name="a1446b77ea90f6f70cc543c2ef8649a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1446b77ea90f6f70cc543c2ef8649a30">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pltk::Platform::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates any related platform data, such as system events. </p>
+<p>Although this method is not static, the functions performed are indedepend of the exact <code><a class="el" href="classpltk_1_1_platform.html">Platform</a></code> object. Thus, calling this method will produce the same result regarless of the exact object. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Dev/caiaphas/libs/pltk/include/pltk/<a class="el" href="platform_8hpp_source.html">platform.hpp</a></li>
 <li>C:/Dev/caiaphas/libs/pltk/src/platform.cpp</li>

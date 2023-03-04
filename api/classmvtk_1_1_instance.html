@@ -51,10 +51,16 @@ $(function() {
   <div class="headertitle"><div class="title">mvtk::Instance Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Object wrapper for Vulkan <code>VkInstance</code>.  
+ <a href="classmvtk_1_1_instance.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="instance_8hpp_source.html">instance.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object responsible for configuring and constructing instances.  <a href="classmvtk_1_1_instance_1_1_builder.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -74,17 +80,88 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a71891c40b2b667e2ae4ff7d8d80ad168"><td class="memItemLeft" align="right" valign="top"><a id="a71891c40b2b667e2ae4ff7d8d80ad168" name="a71891c40b2b667e2ae4ff7d8d80ad168"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>operator VkInstance</b> () const noexcept</td></tr>
 <tr class="separator:a71891c40b2b667e2ae4ff7d8d80ad168"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a8396616c89fa39afb70fd26f344514"><td class="memTemplParams" colspan="2"><a id="a7a8396616c89fa39afb70fd26f344514" name="a7a8396616c89fa39afb70fd26f344514"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a7a8396616c89fa39afb70fd26f344514"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>getFunction</b> (std::string_view name)</td></tr>
+<tr class="memitem:a7a8396616c89fa39afb70fd26f344514"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a7a8396616c89fa39afb70fd26f344514"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classmvtk_1_1_instance.html#a7a8396616c89fa39afb70fd26f344514">getFunction</a> (std::string_view name)</td></tr>
+<tr class="memdesc:a7a8396616c89fa39afb70fd26f344514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves Vulkan functions not loaded by default.  <br /></td></tr>
 <tr class="separator:a7a8396616c89fa39afb70fd26f344514"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a5fc14a3acba44481569c604c655ed09c"><td class="memItemLeft" align="right" valign="top"><a id="a5fc14a3acba44481569c604c655ed09c" name="a5fc14a3acba44481569c604c655ed09c"></a>
-static <a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a>&#160;</td><td class="memItemRight" valign="bottom"><b>builder</b> () noexcept</td></tr>
+<tr class="memitem:a5fc14a3acba44481569c604c655ed09c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmvtk_1_1_instance.html#a5fc14a3acba44481569c604c655ed09c">builder</a> () noexcept</td></tr>
+<tr class="memdesc:a5fc14a3acba44481569c604c655ed09c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method required to construct an <code><a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Instance::Builder</a></code>, and thus an <code><a class="el" href="classmvtk_1_1_instance.html">Instance</a></code>.  <br /></td></tr>
 <tr class="separator:a5fc14a3acba44481569c604c655ed09c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Object wrapper for Vulkan <code>VkInstance</code>. </p>
+<p>Cannot be instantiated directly, but through an instance <code><a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Instance::Builder</a></code>, wherea additional options can be configured. The internal <code>VkInstance</code> can be retrieved by casting this object.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classmvtk_1_1_instance.html#a5fc14a3acba44481569c604c655ed09c" title="The method required to construct an Instance::Builder, and thus an Instance.">Instance::builder()</a> </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5fc14a3acba44481569c604c655ed09c" name="a5fc14a3acba44481569c604c655ed09c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fc14a3acba44481569c604c655ed09c">&#9670;&#160;</a></span>builder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> mvtk::Instance::builder </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The method required to construct an <code><a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Instance::Builder</a></code>, and thus an <code><a class="el" href="classmvtk_1_1_instance.html">Instance</a></code>. </p>
+<dl class="section return"><dt>Returns</dt><dd>A new builder; cannot be coppied or moved. </dd></dl>
+
+</div>
+</div>
+<a id="a7a8396616c89fa39afb70fd26f344514" name="a7a8396616c89fa39afb70fd26f344514"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a8396616c89fa39afb70fd26f344514">&#9670;&#160;</a></span>getFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T mvtk::Instance::getFunction </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves Vulkan functions not loaded by default. </p>
+<p>This is primarily used to access extension functionallity, such as the creation of debug messengers. If the requested function is not loaded, this function will throw.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">T</td><td>The type representation of the requested function. </td></tr>
+    <tr><td class="paramname">name</td><td>Name of the function to retrieve. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Dev/caiaphas/libs/mvtk/include/mvtk/<a class="el" href="instance_8hpp_source.html">instance.hpp</a></li>
 <li>C:/Dev/caiaphas/libs/mvtk/src/instance.cpp</li>

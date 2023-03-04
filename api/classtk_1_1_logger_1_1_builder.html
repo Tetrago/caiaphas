@@ -50,6 +50,11 @@ $(function() {
   <div class="headertitle"><div class="title">tk::Logger::Builder Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Used to construct and configure a logger, and is the only way to acquire one.  
+ <a href="classtk_1_1_logger_1_1_builder.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="logger_8hpp_source.html">logger.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -59,14 +64,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a78a9d553b2c423edbb30b8b45fe25634"><td class="memItemLeft" align="right" valign="top"><a id="a78a9d553b2c423edbb30b8b45fe25634" name="a78a9d553b2c423edbb30b8b45fe25634"></a>
 <a class="el" href="classtk_1_1_logger_1_1_builder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classtk_1_1_logger_1_1_builder.html">Builder</a> &amp;)=delete</td></tr>
 <tr class="separator:a78a9d553b2c423edbb30b8b45fe25634"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ec982f205c367584f53a1f64c3afa28"><td class="memItemLeft" align="right" valign="top"><a id="a9ec982f205c367584f53a1f64c3afa28" name="a9ec982f205c367584f53a1f64c3afa28"></a>
-<a class="el" href="classtk_1_1_logger_1_1_builder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>toStdOut</b> () noexcept</td></tr>
+<tr class="memitem:a9ec982f205c367584f53a1f64c3afa28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtk_1_1_logger_1_1_builder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtk_1_1_logger_1_1_builder.html#a9ec982f205c367584f53a1f64c3afa28">toStdOut</a> () noexcept</td></tr>
+<tr class="memdesc:a9ec982f205c367584f53a1f64c3afa28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends colored logger messages to the terminal window.  <br /></td></tr>
 <tr class="separator:a9ec982f205c367584f53a1f64c3afa28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30f27bef3057a56c7b9b844d50c08fbd"><td class="memItemLeft" align="right" valign="top"><a id="a30f27bef3057a56c7b9b844d50c08fbd" name="a30f27bef3057a56c7b9b844d50c08fbd"></a>
 <a class="el" href="classtk_1_1_logger_1_1_builder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>toFile</b> (const std::filesystem::path &amp;path) noexcept</td></tr>
+<tr class="memdesc:a30f27bef3057a56c7b9b844d50c08fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends logger messages to the specified file. <br /></td></tr>
 <tr class="separator:a30f27bef3057a56c7b9b844d50c08fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12e599e2e8476aa299b129d49f5b145e"><td class="memItemLeft" align="right" valign="top"><a id="a12e599e2e8476aa299b129d49f5b145e" name="a12e599e2e8476aa299b129d49f5b145e"></a>
-<a class="el" href="classtk_1_1_logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><b>build</b> () noexcept</td></tr>
+<tr class="memitem:a12e599e2e8476aa299b129d49f5b145e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtk_1_1_logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtk_1_1_logger_1_1_builder.html#a12e599e2e8476aa299b129d49f5b145e">build</a> () noexcept</td></tr>
+<tr class="memdesc:a12e599e2e8476aa299b129d49f5b145e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a <code><a class="el" href="classtk_1_1_logger.html">Logger</a></code> using the provided settings.  <br /></td></tr>
 <tr class="separator:a12e599e2e8476aa299b129d49f5b145e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
@@ -75,6 +81,66 @@ Friends</h2></td></tr>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>Logger</b></td></tr>
 <tr class="separator:aff02b76416d2846736b7ecd798921a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Used to construct and configure a logger, and is the only way to acquire one. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classtk_1_1_logger.html#a5a9c4808f3dba81c94e36c7d41061dcd" title="Primary method of constructing a logger.">builder()</a> </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a12e599e2e8476aa299b129d49f5b145e" name="a12e599e2e8476aa299b129d49f5b145e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12e599e2e8476aa299b129d49f5b145e">&#9670;&#160;</a></span>build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtk_1_1_logger.html">Logger</a> tk::Logger::Builder::build </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Builds a <code><a class="el" href="classtk_1_1_logger.html">Logger</a></code> using the provided settings. </p>
+<dl class="section return"><dt>Returns</dt><dd>New logger instance. </dd></dl>
+
+</div>
+</div>
+<a id="a9ec982f205c367584f53a1f64c3afa28" name="a9ec982f205c367584f53a1f64c3afa28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec982f205c367584f53a1f64c3afa28">&#9670;&#160;</a></span>toStdOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtk_1_1_logger_1_1_builder.html">Logger::Builder</a> &amp; tk::Logger::Builder::toStdOut </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sends colored logger messages to the terminal window. </p>
+<p>This method is not protected, and can be called multiple times, resulting in duplicate messages if such a situation were to occur. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Dev/caiaphas/libs/toolkit/include/toolkit/<a class="el" href="logger_8hpp_source.html">logger.hpp</a></li>
 <li>C:/Dev/caiaphas/libs/toolkit/src/logger.cpp</li>

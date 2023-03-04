@@ -50,6 +50,11 @@ $(function() {
   <div class="headertitle"><div class="title">mvtk::Instance::Builder Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Object responsible for configuring and constructing instances.  
+ <a href="classmvtk_1_1_instance_1_1_builder.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="instance_8hpp_source.html">instance.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -59,23 +64,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afcaaf440fffd725b69247b4ec306da2d"><td class="memItemLeft" align="right" valign="top"><a id="afcaaf440fffd725b69247b4ec306da2d" name="afcaaf440fffd725b69247b4ec306da2d"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Builder</b> (<a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:afcaaf440fffd725b69247b4ec306da2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af615e7094ee865646eb12bbb527a1f5a"><td class="memItemLeft" align="right" valign="top"><a id="af615e7094ee865646eb12bbb527a1f5a" name="af615e7094ee865646eb12bbb527a1f5a"></a>
-<a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>name</b> (std::string_view applicationName) noexcept</td></tr>
+<tr class="memitem:af615e7094ee865646eb12bbb527a1f5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmvtk_1_1_instance_1_1_builder.html#af615e7094ee865646eb12bbb527a1f5a">name</a> (std::string_view applicationName) noexcept</td></tr>
+<tr class="memdesc:af615e7094ee865646eb12bbb527a1f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the internal application name for the Vulkan instance.  <br /></td></tr>
 <tr class="separator:af615e7094ee865646eb12bbb527a1f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a355f55589b72de3ad8f637f67a7b65c2"><td class="memItemLeft" align="right" valign="top"><a id="a355f55589b72de3ad8f637f67a7b65c2" name="a355f55589b72de3ad8f637f67a7b65c2"></a>
 <a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>version</b> (int major, int minor, int patch) noexcept</td></tr>
 <tr class="separator:a355f55589b72de3ad8f637f67a7b65c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93d1d280758471770aefa7e608a200ce"><td class="memItemLeft" align="right" valign="top"><a id="a93d1d280758471770aefa7e608a200ce" name="a93d1d280758471770aefa7e608a200ce"></a>
-<a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>extension</b> (std::span&lt; const char *const &gt; extensions) noexcept</td></tr>
+<tr class="memitem:a93d1d280758471770aefa7e608a200ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmvtk_1_1_instance_1_1_builder.html#a93d1d280758471770aefa7e608a200ce">extension</a> (std::span&lt; const char *const &gt; extensions) noexcept</td></tr>
+<tr class="memdesc:a93d1d280758471770aefa7e608a200ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds required instance extensions to the builder for reference upon construction.  <br /></td></tr>
 <tr class="separator:a93d1d280758471770aefa7e608a200ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4b50d508c7043e22823bfdb6f0f6b23"><td class="memItemLeft" align="right" valign="top"><a id="ac4b50d508c7043e22823bfdb6f0f6b23" name="ac4b50d508c7043e22823bfdb6f0f6b23"></a>
-<a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>extension</b> (const char *extension) noexcept</td></tr>
+<tr class="memitem:ac4b50d508c7043e22823bfdb6f0f6b23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmvtk_1_1_instance_1_1_builder.html#ac4b50d508c7043e22823bfdb6f0f6b23">extension</a> (const char *extension) noexcept</td></tr>
+<tr class="memdesc:ac4b50d508c7043e22823bfdb6f0f6b23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an individual extension to the builder.  <br /></td></tr>
 <tr class="separator:ac4b50d508c7043e22823bfdb6f0f6b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7013af871dd52ecefd8838b9e64bef5"><td class="memItemLeft" align="right" valign="top"><a id="ac7013af871dd52ecefd8838b9e64bef5" name="ac7013af871dd52ecefd8838b9e64bef5"></a>
-<a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>debug</b> () noexcept</td></tr>
+<tr class="memitem:ac7013af871dd52ecefd8838b9e64bef5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmvtk_1_1_instance_1_1_builder.html#ac7013af871dd52ecefd8838b9e64bef5">debug</a> () noexcept</td></tr>
+<tr class="memdesc:ac7013af871dd52ecefd8838b9e64bef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds debugging features and configurations to the instance.  <br /></td></tr>
 <tr class="separator:ac7013af871dd52ecefd8838b9e64bef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a870553a60aadf77ab1d32dbae2e015cb"><td class="memItemLeft" align="right" valign="top"><a id="a870553a60aadf77ab1d32dbae2e015cb" name="a870553a60aadf77ab1d32dbae2e015cb"></a>
-<a class="el" href="classmvtk_1_1_instance.html">Instance</a>&#160;</td><td class="memItemRight" valign="bottom"><b>build</b> ()</td></tr>
+<tr class="memitem:a870553a60aadf77ab1d32dbae2e015cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmvtk_1_1_instance.html">Instance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmvtk_1_1_instance_1_1_builder.html#a870553a60aadf77ab1d32dbae2e015cb">build</a> ()</td></tr>
+<tr class="memdesc:a870553a60aadf77ab1d32dbae2e015cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the instance using the configured options.  <br /></td></tr>
 <tr class="separator:a870553a60aadf77ab1d32dbae2e015cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
@@ -84,6 +89,181 @@ Friends</h2></td></tr>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>Instance</b></td></tr>
 <tr class="separator:aea90763cbe6c91bbcd6e9bf0d66dc500"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Object responsible for configuring and constructing instances. </p>
+<p>The builder object cannot be copied or moved, so the construction needs to be a one-shot call.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classmvtk_1_1_instance.html#a5fc14a3acba44481569c604c655ed09c" title="The method required to construct an Instance::Builder, and thus an Instance.">Instance::builder()</a> </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a870553a60aadf77ab1d32dbae2e015cb" name="a870553a60aadf77ab1d32dbae2e015cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a870553a60aadf77ab1d32dbae2e015cb">&#9670;&#160;</a></span>build()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmvtk_1_1_instance.html">Instance</a> mvtk::Instance::Builder::build </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs the instance using the configured options. </p>
+<p>No error checking or input validation is applied up to this point. None of the past methods have checked the existence of the supplied extensions or layers, so any issues will arise here, upon creation. Thus, it is possible for this function to throw.</p>
+<dl class="section return"><dt>Returns</dt><dd>Constructed and usable Vulkan instance. </dd></dl>
+
+</div>
+</div>
+<a id="ac7013af871dd52ecefd8838b9e64bef5" name="ac7013af871dd52ecefd8838b9e64bef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7013af871dd52ecefd8838b9e64bef5">&#9670;&#160;</a></span>debug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> &amp; mvtk::Instance::Builder::debug </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds debugging features and configurations to the instance. </p>
+<p>This primarily achieves four tasks:</p><ul>
+<li>The <code>VK_EXT_DEBUG_UTILS_EXTENSION</code> extension is added to the extensions list.</li>
+<li>The <code>VK_LAYER_KHRONOS_validation</code> layer is added to the layers list.</li>
+<li>A debug messenger is created that logs all Vulkan messages to "vulkan.log".</li>
+<li>A secondary debug messenger with the same output location is applied to the instance creation and destruction. </li>
+</ul>
+
+</div>
+</div>
+<a id="ac4b50d508c7043e22823bfdb6f0f6b23" name="ac4b50d508c7043e22823bfdb6f0f6b23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4b50d508c7043e22823bfdb6f0f6b23">&#9670;&#160;</a></span>extension() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> &amp; mvtk::Instance::Builder::extension </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>extension</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds an individual extension to the builder. </p>
+<p>The validity of the extension name will not be checked until calling <code><a class="el" href="classmvtk_1_1_instance_1_1_builder.html#a870553a60aadf77ab1d32dbae2e015cb">Instance::Builder::build()</a></code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">extension</td><td>Individual extension name.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classmvtk_1_1_instance_1_1_builder.html#a93d1d280758471770aefa7e608a200ce" title="Adds required instance extensions to the builder for reference upon construction.">Instance::Builder::extension(std::span&lt;const char* const&gt;)</a> </dd></dl>
+
+</div>
+</div>
+<a id="a93d1d280758471770aefa7e608a200ce" name="a93d1d280758471770aefa7e608a200ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93d1d280758471770aefa7e608a200ce">&#9670;&#160;</a></span>extension() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> &amp; mvtk::Instance::Builder::extension </td>
+          <td>(</td>
+          <td class="paramtype">std::span&lt; const char *const &gt;&#160;</td>
+          <td class="paramname"><em>extensions</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adds required instance extensions to the builder for reference upon construction. </p>
+<p>This method can be called any number of times, and the supplied extensions will be stacked and not discarded.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">extensions</td><td>Vector of extension names.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classmvtk_1_1_instance_1_1_builder.html#ac4b50d508c7043e22823bfdb6f0f6b23" title="Adds an individual extension to the builder.">Instance::Builder::extension(const char*)</a> </dd></dl>
+
+</div>
+</div>
+<a id="af615e7094ee865646eb12bbb527a1f5a" name="af615e7094ee865646eb12bbb527a1f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af615e7094ee865646eb12bbb527a1f5a">&#9670;&#160;</a></span>name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmvtk_1_1_instance_1_1_builder.html">Builder</a> &amp; mvtk::Instance::Builder::name </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view&#160;</td>
+          <td class="paramname"><em>applicationName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the internal application name for the Vulkan instance. </p>
+<p>Can be used be drivers to add per-game adjustments.</p>
+<p>The engine name of the instance is always set to "mvtk".</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">applicationName</td><td>Internal application name of instance. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>C:/Dev/caiaphas/libs/mvtk/include/mvtk/<a class="el" href="instance_8hpp_source.html">instance.hpp</a></li>
 </ul>
